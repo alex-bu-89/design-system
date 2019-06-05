@@ -10,10 +10,11 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface AbSlider {
-    /**
-    * The last name
-    */
-    'last': string;
+    'max': number;
+    'min': number;
+    'name': string;
+    'step': number;
+    'value': number;
   }
 }
 
@@ -32,10 +33,11 @@ declare global {
 
 declare namespace LocalJSX {
   interface AbSlider extends JSXBase.HTMLAttributes<HTMLAbSliderElement> {
-    /**
-    * The last name
-    */
-    'last'?: string;
+    'max'?: number;
+    'min'?: number;
+    'name'?: string;
+    'step'?: number;
+    'value'?: number;
   }
 
   interface IntrinsicElements {
