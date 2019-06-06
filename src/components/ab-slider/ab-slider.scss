@@ -1,7 +1,9 @@
 
 :host {
-  $track-color: #eceff1 !default;
-  $thumb-color: #607d8b !default;
+  $track-color: #E7E3DB !default;
+  $thumb-color: #fff !default;
+
+  $progress-color: #08295E !default;
 
   $thumb-radius: 12px !default;
   $thumb-height: 24px !default;
@@ -10,17 +12,17 @@
   $thumb-shadow-blur: 4px !default;
   $thumb-shadow-color: rgba(0, 0, 0, .2) !default;
   $thumb-border-width: 2px !default;
-  $thumb-border-color: #eceff1 !default;
+  $thumb-border-color: #08295E !default;
 
   $track-width: 100% !default;
-  $track-height: 8px !default;
+  $track-height: 20px !default;
   $track-shadow-size: 1px !default;
   $track-shadow-blur: 1px !default;
   $track-shadow-color: rgba(0, 0, 0, .2) !default;
-  $track-border-width: 2px !default;
+  $track-border-width: 0px !default;
   $track-border-color: #cfd8dc !default;
 
-  $track-radius: 5px !default;
+  $track-radius: 20px !default;
   $contrast: 5% !default;
 
   $ie-bottom-track-color: darken($track-color, $contrast) !default;
@@ -52,7 +54,6 @@
 
   [type='range'] {
     -webkit-appearance: none;
-    background: transparent;
     margin: $thumb-height / 2 0;
     width: $track-width;
 
@@ -154,6 +155,16 @@
       &::-ms-fill-upper {
         @include disabled;
       }
+    }
+
+    &::-moz-range-progress,
+    &::-ms-fill-lower {
+      background-color: $progress-color; 
+    }
+
+    &::-moz-range-track,
+    &::-ms-fill-upper {
+      background-color: #fff; 
     }
   }
 }
