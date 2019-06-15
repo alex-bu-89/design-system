@@ -9,6 +9,10 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface AbRating {
+    'maxValue': number;
+    'value': number;
+  }
   interface AbSlider {
     'max': number;
     'min': number;
@@ -21,17 +25,28 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLAbRatingElement extends Components.AbRating, HTMLStencilElement {}
+  var HTMLAbRatingElement: {
+    prototype: HTMLAbRatingElement;
+    new (): HTMLAbRatingElement;
+  };
+
   interface HTMLAbSliderElement extends Components.AbSlider, HTMLStencilElement {}
   var HTMLAbSliderElement: {
     prototype: HTMLAbSliderElement;
     new (): HTMLAbSliderElement;
   };
   interface HTMLElementTagNameMap {
+    'ab-rating': HTMLAbRatingElement;
     'ab-slider': HTMLAbSliderElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface AbRating extends JSXBase.HTMLAttributes<HTMLAbRatingElement> {
+    'maxValue'?: number;
+    'value'?: number;
+  }
   interface AbSlider extends JSXBase.HTMLAttributes<HTMLAbSliderElement> {
     'max'?: number;
     'min'?: number;
@@ -41,6 +56,7 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'ab-rating': AbRating;
     'ab-slider': AbSlider;
   }
 }

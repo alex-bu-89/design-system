@@ -3,7 +3,7 @@ import { Component, Element, State, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'ab-slider',
-  styleUrl: 'ab-slider.scss',
+  styleUrl: 'slider.scss',
   shadow: true
 })
 export class Slider {
