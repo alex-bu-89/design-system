@@ -2,11 +2,11 @@
 @import "variables.scss";
 
 html, body {
-  color: #092C4C;
+  color: $font;
   font-family: Helvetica,Arial,sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  background-color: #fff;
+  background-color: $white;
   overflow-y: scroll;
   direction: ltr;
 }
