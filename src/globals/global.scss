@@ -1,0 +1,12 @@
+@import "~normalize.css/normalize.css";
+@import "variables.scss";
+
+html, body {
+  color: #092C4C;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: #fff;
+  overflow-y: scroll;
+  direction: ltr;
+}

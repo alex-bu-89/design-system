@@ -2,7 +2,8 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'web-components',
+  namespace: 'ab-design-system',
+  globalStyle: 'src/globals/global.scss',
   outputTargets: [
     {
       type: 'dist',

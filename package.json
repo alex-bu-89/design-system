@@ -21,8 +21,11 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "devDependencies": {
-    "@stencil/core": "1.0.0-beta.8",
-    "@stencil/sass": "^0.2.3"
+    "@stencil/core": "^1.0.7",
+    "@stencil/sass": "^1.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
