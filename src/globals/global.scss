@@ -1,12 +1,25 @@
-@import "~normalize.css/normalize.css";
 @import "variables.scss";
+
+* {
+  box-sizing: border-box;
+  overflow: auto;
+}
 
 html, body {
   color: $font;
-  font-family: Helvetica,Arial,sans-serif;
+  // font-family: Helvetica,Arial,sans-serif;
   font-size: 16px;
   line-height: 1.4;
   background-color: $white;
   overflow-y: scroll;
   direction: ltr;
+}
+
+body > header {
+  background: $gray-10;
+  padding: 100px 0;
+}
+
+body > section {
+  padding: 50px 0;
 }

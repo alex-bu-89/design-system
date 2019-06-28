@@ -20,6 +20,7 @@ export namespace Components {
     'step': number;
     'value': number;
   }
+  interface AbToogleButton {}
 }
 
 declare global {
@@ -36,9 +37,16 @@ declare global {
     prototype: HTMLAbSliderElement;
     new (): HTMLAbSliderElement;
   };
+
+  interface HTMLAbToogleButtonElement extends Components.AbToogleButton, HTMLStencilElement {}
+  var HTMLAbToogleButtonElement: {
+    prototype: HTMLAbToogleButtonElement;
+    new (): HTMLAbToogleButtonElement;
+  };
   interface HTMLElementTagNameMap {
     'ab-rating': HTMLAbRatingElement;
     'ab-slider': HTMLAbSliderElement;
+    'ab-toogle-button': HTMLAbToogleButtonElement;
   }
 }
 
@@ -54,10 +62,12 @@ declare namespace LocalJSX {
     'step'?: number;
     'value'?: number;
   }
+  interface AbToogleButton extends JSXBase.HTMLAttributes<HTMLAbToogleButtonElement> {}
 
   interface IntrinsicElements {
     'ab-rating': AbRating;
     'ab-slider': AbSlider;
+    'ab-toogle-button': AbToogleButton;
   }
 }
 

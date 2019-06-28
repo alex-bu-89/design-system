@@ -12,12 +12,40 @@
   <script nomodule src="/build/ab-design-system.js"></script>
 </head>
 <body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="font-weight-bold">Style Guide</h1>
+          <p class="lead">a set of standards for the writing, formatting and design of documents</p>
+        </div>
+        <div class="col">
 
-  <div class="container">
-    <ab-slider min="10" max="30" name="tiny-slider"></ab-slider>
-
-    <ab-rating maxValue="5"></ab-rating>
-  </div>
-
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="container">
+    <div class="row">
+        <div class="col-3">
+          <h2>Native slider</h2>
+          <p>Tiny native slider</p>
+        </div>
+        <div class="col-9">
+            <ab-slider min="10" max="30" name="tiny-slider"></ab-slider>
+        </div>
+    </div>
+  </section>
+  <section class="container">
+    <div class="row">
+        <div class="col-3">
+            <h2>Star rating</h2>
+            <p>Tiny rating</p>
+          </div>
+        <div class="col-9">
+            <ab-rating maxValue="5"></ab-rating>
+        </div>
+    </div>
+  </section>
 </body>
 </html>
