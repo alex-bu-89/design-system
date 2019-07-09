@@ -9,7 +9,7 @@ export class ToogleButton {
    render() {
     return  (
       <div>
-        Toogle Button
+        Toogle Buttonn
       </div>
     );
   }
