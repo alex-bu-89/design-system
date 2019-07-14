@@ -23,7 +23,6 @@ export class Slider {
 
   handleChange(e:any) {
     this.currentValue = parseInt(e.target.value);
-    console.log(this.currentValue);
   }
 
   render() {
