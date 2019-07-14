@@ -12,7 +12,7 @@ export class Slider {
   @Prop() max: number = 10;
   @Prop() value: number = 0;
   @Prop() step: number = 1;
-  
+
   @State() currentValue: number;
 
   @Element() element: HTMLElement;
@@ -20,7 +20,6 @@ export class Slider {
   componentWillLoad() {
     this.currentValue = this.value;
   }
-
 
   handleChange(e:any) {
     this.currentValue = parseInt(e.target.value);
