@@ -6,7 +6,7 @@
 }
 
 html, body {
-  color: $font;
+  color: $font-color;
   // font-family: Helvetica,Arial,sans-serif;
   font-size: 16px;
   line-height: 1.4;
@@ -20,10 +20,6 @@ body > header {
   padding: 100px 0;
 }
 
-body > section {
-  padding: 50px 0;
-}
-
 h1, h2, h3, h4, h5 {
-  color: $headers;
+  color: $headers-color;
 }

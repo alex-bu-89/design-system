@@ -9,6 +9,10 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface AbLayoutSection {
+    'header': string;
+    'subHeader': string;
+  }
   interface AbRating {
     'maxValue': number;
     'value': number;
@@ -26,6 +30,12 @@ export namespace Components {
 
 declare global {
 
+
+  interface HTMLAbLayoutSectionElement extends Components.AbLayoutSection, HTMLStencilElement {}
+  var HTMLAbLayoutSectionElement: {
+    prototype: HTMLAbLayoutSectionElement;
+    new (): HTMLAbLayoutSectionElement;
+  };
 
   interface HTMLAbRatingElement extends Components.AbRating, HTMLStencilElement {}
   var HTMLAbRatingElement: {
@@ -51,6 +61,7 @@ declare global {
     new (): HTMLAbToogleGroupElement;
   };
   interface HTMLElementTagNameMap {
+    'ab-layout-section': HTMLAbLayoutSectionElement;
     'ab-rating': HTMLAbRatingElement;
     'ab-slider': HTMLAbSliderElement;
     'ab-toogle-button': HTMLAbToogleButtonElement;
@@ -59,6 +70,10 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface AbLayoutSection extends JSXBase.HTMLAttributes<HTMLAbLayoutSectionElement> {
+    'header'?: string;
+    'subHeader'?: string;
+  }
   interface AbRating extends JSXBase.HTMLAttributes<HTMLAbRatingElement> {
     'maxValue'?: number;
     'value'?: number;
@@ -74,6 +89,7 @@ declare namespace LocalJSX {
   interface AbToogleGroup extends JSXBase.HTMLAttributes<HTMLAbToogleGroupElement> {}
 
   interface IntrinsicElements {
+    'ab-layout-section': AbLayoutSection;
     'ab-rating': AbRating;
     'ab-slider': AbSlider;
     'ab-toogle-button': AbToogleButton;
