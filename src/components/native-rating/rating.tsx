@@ -2,8 +2,8 @@ import { Component, State, Prop, h } from '@stencil/core';
 // import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'ab-native-rating',
-  styleUrl: 'native-rating.scss',
+  tag: 'ab-rating',
+  styleUrl: 'rating.scss',
   shadow: true
 })
 export class Rating {
