@@ -2,8 +2,8 @@ import { Component, State, Prop, h } from '@stencil/core';
 // import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'ab-rating',
-  styleUrl: 'rating.scss',
+  tag: 'ab-native-rating',
+  styleUrl: 'native-rating.scss',
   shadow: true
 })
 export class Rating {
@@ -23,7 +23,7 @@ export class Rating {
 
   createRating(numberOfStars: number) {
     let ratingList = [];
-    
+
     for (let i = 1; i <= this.maxValue; i++) {
       if (i <= numberOfStars) {
         // ratingList.push(<img src="assets/images/sun.svg" />);

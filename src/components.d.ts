@@ -13,7 +13,7 @@ export namespace Components {
     'header': string;
     'subHeader': string;
   }
-  interface AbRating {
+  interface AbNativeRating {
     'maxValue': number;
     'value': number;
   }
@@ -37,10 +37,10 @@ declare global {
     new (): HTMLAbLayoutSectionElement;
   };
 
-  interface HTMLAbRatingElement extends Components.AbRating, HTMLStencilElement {}
-  var HTMLAbRatingElement: {
-    prototype: HTMLAbRatingElement;
-    new (): HTMLAbRatingElement;
+  interface HTMLAbNativeRatingElement extends Components.AbNativeRating, HTMLStencilElement {}
+  var HTMLAbNativeRatingElement: {
+    prototype: HTMLAbNativeRatingElement;
+    new (): HTMLAbNativeRatingElement;
   };
 
   interface HTMLAbSliderElement extends Components.AbSlider, HTMLStencilElement {}
@@ -62,7 +62,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'ab-layout-section': HTMLAbLayoutSectionElement;
-    'ab-rating': HTMLAbRatingElement;
+    'ab-native-rating': HTMLAbNativeRatingElement;
     'ab-slider': HTMLAbSliderElement;
     'ab-toogle-button': HTMLAbToogleButtonElement;
     'ab-toogle-group': HTMLAbToogleGroupElement;
@@ -74,7 +74,7 @@ declare namespace LocalJSX {
     'header'?: string;
     'subHeader'?: string;
   }
-  interface AbRating extends JSXBase.HTMLAttributes<HTMLAbRatingElement> {
+  interface AbNativeRating extends JSXBase.HTMLAttributes<HTMLAbNativeRatingElement> {
     'maxValue'?: number;
     'value'?: number;
   }
@@ -90,7 +90,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'ab-layout-section': AbLayoutSection;
-    'ab-rating': AbRating;
+    'ab-native-rating': AbNativeRating;
     'ab-slider': AbSlider;
     'ab-toogle-button': AbToogleButton;
     'ab-toogle-group': AbToogleGroup;
