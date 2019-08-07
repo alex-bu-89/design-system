@@ -6,7 +6,7 @@ import { Component, Element, State, Prop, h } from '@stencil/core';
   shadow: true
 })
 export class NativeSlider {
-  @Prop() name: string = 'ab-slider';
+  @Prop() name: string = 'ab-native-slider';
   @Prop() min: number = 0;
   @Prop() max: number = 10;
   @Prop() value: number = 0;
