@@ -1,5 +1,5 @@
 .ab-native-slider {
-  $track-color: #E7E3DB !default;
+  $track-color: $secondary !default;
   $thumb-color: #fff !default;
 
   $progress-color: #08295E !default;
@@ -11,7 +11,7 @@
   $thumb-shadow-blur: 4px !default;
   $thumb-shadow-color: rgba(0, 0, 0, .2) !default;
   $thumb-border-width: 2px !default;
-  $thumb-border-color: #08295E !default;
+  $thumb-border-color: $white !default;
 
   $track-width: 100% !default;
   $track-height: 20px !default;
