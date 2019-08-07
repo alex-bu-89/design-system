@@ -1,5 +1,4 @@
-
-:host {
+.ab-native-slider {
   $track-color: #E7E3DB !default;
   $thumb-color: #fff !default;
 
@@ -159,12 +158,12 @@
 
     &::-moz-range-progress,
     &::-ms-fill-lower {
-      background-color: $progress-color; 
+      background-color: $progress-color;
     }
 
     &::-moz-range-track,
     &::-ms-fill-upper {
-      background-color: #fff; 
+      background-color: #fff;
     }
   }
 }

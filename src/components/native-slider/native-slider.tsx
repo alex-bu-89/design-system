@@ -1,12 +1,11 @@
 import { Component, Element, State, Prop, h } from '@stencil/core';
-// import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'ab-slider',
-  styleUrl: 'slider.scss',
+  tag: 'ab-native-slider',
+  styleUrl: 'native-slider.scss',
   shadow: true
 })
-export class Slider {
+export class NativeSlider {
   @Prop() name: string = 'ab-slider';
   @Prop() min: number = 0;
   @Prop() max: number = 10;
@@ -27,7 +26,7 @@ export class Slider {
 
   render() {
     return (
-      <div class='ab-slider'>
+      <div class='ab-native-slider'>
         <input
           type='range'
           min={this.min}

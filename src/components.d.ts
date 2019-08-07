@@ -13,15 +13,15 @@ export namespace Components {
     'header': string;
     'subHeader': string;
   }
-  interface AbRating {
-    'maxValue': number;
-    'value': number;
-  }
-  interface AbSlider {
+  interface AbNativeSlider {
     'max': number;
     'min': number;
     'name': string;
     'step': number;
+    'value': number;
+  }
+  interface AbRating {
+    'maxValue': number;
     'value': number;
   }
   interface AbToogleButton {}
@@ -37,16 +37,16 @@ declare global {
     new (): HTMLAbLayoutSectionElement;
   };
 
+  interface HTMLAbNativeSliderElement extends Components.AbNativeSlider, HTMLStencilElement {}
+  var HTMLAbNativeSliderElement: {
+    prototype: HTMLAbNativeSliderElement;
+    new (): HTMLAbNativeSliderElement;
+  };
+
   interface HTMLAbRatingElement extends Components.AbRating, HTMLStencilElement {}
   var HTMLAbRatingElement: {
     prototype: HTMLAbRatingElement;
     new (): HTMLAbRatingElement;
-  };
-
-  interface HTMLAbSliderElement extends Components.AbSlider, HTMLStencilElement {}
-  var HTMLAbSliderElement: {
-    prototype: HTMLAbSliderElement;
-    new (): HTMLAbSliderElement;
   };
 
   interface HTMLAbToogleButtonElement extends Components.AbToogleButton, HTMLStencilElement {}
@@ -62,8 +62,8 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'ab-layout-section': HTMLAbLayoutSectionElement;
+    'ab-native-slider': HTMLAbNativeSliderElement;
     'ab-rating': HTMLAbRatingElement;
-    'ab-slider': HTMLAbSliderElement;
     'ab-toogle-button': HTMLAbToogleButtonElement;
     'ab-toogle-group': HTMLAbToogleGroupElement;
   }
@@ -74,15 +74,15 @@ declare namespace LocalJSX {
     'header'?: string;
     'subHeader'?: string;
   }
-  interface AbRating extends JSXBase.HTMLAttributes<HTMLAbRatingElement> {
-    'maxValue'?: number;
-    'value'?: number;
-  }
-  interface AbSlider extends JSXBase.HTMLAttributes<HTMLAbSliderElement> {
+  interface AbNativeSlider extends JSXBase.HTMLAttributes<HTMLAbNativeSliderElement> {
     'max'?: number;
     'min'?: number;
     'name'?: string;
     'step'?: number;
+    'value'?: number;
+  }
+  interface AbRating extends JSXBase.HTMLAttributes<HTMLAbRatingElement> {
+    'maxValue'?: number;
     'value'?: number;
   }
   interface AbToogleButton extends JSXBase.HTMLAttributes<HTMLAbToogleButtonElement> {}
@@ -90,8 +90,8 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'ab-layout-section': AbLayoutSection;
+    'ab-native-slider': AbNativeSlider;
     'ab-rating': AbRating;
-    'ab-slider': AbSlider;
     'ab-toogle-button': AbToogleButton;
     'ab-toogle-group': AbToogleGroup;
   }

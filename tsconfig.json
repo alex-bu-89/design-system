@@ -3,7 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "declaration": false,
-    "experimentalDecorators": true,
+    "experimentalDecorators": false,
     "lib": [
       "dom",
       "es2017"
