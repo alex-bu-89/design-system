@@ -51,10 +51,19 @@
     cursor: not-allowed;
   }
 
+  display: flex;
+
+  label {
+    padding: 10px;
+    min-width: 30px;
+    display: inline-block;
+  }
+
   [type='range'] {
     -webkit-appearance: none;
     margin: $thumb-height / 2 0;
     width: $track-width;
+    // width: calc(100% - 20px);
 
     &::-moz-focus-outer {
       border: 0;
