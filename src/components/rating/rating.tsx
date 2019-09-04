@@ -25,9 +25,9 @@ export class Rating {
 
     for (let i = 1; i <= this.maxValue; i++) {
       if (i <= numberOfStars) {
-        ratingList.push(<span class="rating" onMouseOver={() => this.createRating(i)} onMouseOut={() => this.createRating(this.value)} onClick={() => this.handleChange(i)}>&#x2605;</span>);
+        ratingList.push(<span class="star" onMouseOver={() => this.createRating(i)} onMouseOut={() => this.createRating(this.value)} onClick={() => this.handleChange(i)}>&#x2605;</span>);
       } else {
-        ratingList.push(<span class="rating" onMouseOver={() => this.createRating(i)} onMouseOut={() => this.createRating(this.value)} onClick={() => this.handleChange(i)}>&#x2606;</span>);
+        ratingList.push(<span class="star" onMouseOver={() => this.createRating(i)} onMouseOut={() => this.createRating(this.value)} onClick={() => this.handleChange(i)}>&#x2606;</span>);
       }
     }
 
@@ -36,7 +36,7 @@ export class Rating {
 
    render() {
     return  (
-      <div>
+      <div class="ab-rating">
         {this.ratingList}
       </div>
     );
