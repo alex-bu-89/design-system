@@ -1,5 +1,4 @@
 import { Component, State, Prop, h } from '@stencil/core';
-// import { format } from '../../utils/utils';
 
 @Component({
   tag: 'ab-rating',
@@ -26,7 +25,6 @@ export class Rating {
 
     for (let i = 1; i <= this.maxValue; i++) {
       if (i <= numberOfStars) {
-        // ratingList.push(<img src="assets/images/sun.svg" />);
         ratingList.push(<span class="rating" onMouseOver={() => this.createRating(i)} onMouseOut={() => this.createRating(this.value)} onClick={() => this.handleChange(i)}>&#x2605;</span>);
       } else {
         ratingList.push(<span class="rating" onMouseOver={() => this.createRating(i)} onMouseOut={() => this.createRating(this.value)} onClick={() => this.handleChange(i)}>&#x2606;</span>);
