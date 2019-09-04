@@ -38,6 +38,7 @@ export class Rating {
     return  (
       <div class="ab-rating">
         {this.ratingList}
+        <span class="label">{this.value}</span>
       </div>
     );
   }
