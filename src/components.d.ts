@@ -9,6 +9,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface AbColors {}
   interface AbLayoutSection {
     'header': string;
     'subHeader': string;
@@ -30,6 +31,12 @@ export namespace Components {
 
 declare global {
 
+
+  interface HTMLAbColorsElement extends Components.AbColors, HTMLStencilElement {}
+  var HTMLAbColorsElement: {
+    prototype: HTMLAbColorsElement;
+    new (): HTMLAbColorsElement;
+  };
 
   interface HTMLAbLayoutSectionElement extends Components.AbLayoutSection, HTMLStencilElement {}
   var HTMLAbLayoutSectionElement: {
@@ -61,6 +68,7 @@ declare global {
     new (): HTMLAbToogleGroupElement;
   };
   interface HTMLElementTagNameMap {
+    'ab-colors': HTMLAbColorsElement;
     'ab-layout-section': HTMLAbLayoutSectionElement;
     'ab-native-slider': HTMLAbNativeSliderElement;
     'ab-rating': HTMLAbRatingElement;
@@ -70,6 +78,7 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface AbColors extends JSXBase.HTMLAttributes<HTMLAbColorsElement> {}
   interface AbLayoutSection extends JSXBase.HTMLAttributes<HTMLAbLayoutSectionElement> {
     'header'?: string;
     'subHeader'?: string;
@@ -89,6 +98,7 @@ declare namespace LocalJSX {
   interface AbToogleGroup extends JSXBase.HTMLAttributes<HTMLAbToogleGroupElement> {}
 
   interface IntrinsicElements {
+    'ab-colors': AbColors;
     'ab-layout-section': AbLayoutSection;
     'ab-native-slider': AbNativeSlider;
     'ab-rating': AbRating;
