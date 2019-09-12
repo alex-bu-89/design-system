@@ -9,8 +9,6 @@ export class Rating {
   @Prop() subHeader: string = '';
 
   render() {
-    console.log('----->', this.header);
-    console.log('----->', this.subHeader);
     return  (
       <Host class="container">
         <div class="row">
