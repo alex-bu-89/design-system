@@ -9,6 +9,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface AbButton {}
   interface AbColors {}
   interface AbLayoutSection {
     'header': string;
@@ -31,6 +32,12 @@ export namespace Components {
 
 declare global {
 
+
+  interface HTMLAbButtonElement extends Components.AbButton, HTMLStencilElement {}
+  var HTMLAbButtonElement: {
+    prototype: HTMLAbButtonElement;
+    new (): HTMLAbButtonElement;
+  };
 
   interface HTMLAbColorsElement extends Components.AbColors, HTMLStencilElement {}
   var HTMLAbColorsElement: {
@@ -68,6 +75,7 @@ declare global {
     new (): HTMLAbToogleGroupElement;
   };
   interface HTMLElementTagNameMap {
+    'ab-button': HTMLAbButtonElement;
     'ab-colors': HTMLAbColorsElement;
     'ab-layout-section': HTMLAbLayoutSectionElement;
     'ab-native-slider': HTMLAbNativeSliderElement;
@@ -78,6 +86,7 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface AbButton extends JSXBase.HTMLAttributes<HTMLAbButtonElement> {}
   interface AbColors extends JSXBase.HTMLAttributes<HTMLAbColorsElement> {}
   interface AbLayoutSection extends JSXBase.HTMLAttributes<HTMLAbLayoutSectionElement> {
     'header'?: string;
@@ -98,6 +107,7 @@ declare namespace LocalJSX {
   interface AbToogleGroup extends JSXBase.HTMLAttributes<HTMLAbToogleGroupElement> {}
 
   interface IntrinsicElements {
+    'ab-button': AbButton;
     'ab-colors': AbColors;
     'ab-layout-section': AbLayoutSection;
     'ab-native-slider': AbNativeSlider;
