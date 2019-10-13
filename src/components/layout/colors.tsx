@@ -19,7 +19,6 @@ export class Rating {
                 <div class={ `ab-color ${color}` }>
                   <div class={`ab-circle big ${color}-b`}></div>
                   <span class="ab-color-name">{ color }</span>
-                  <span class="ab-color-hash">#fff</span>
                 </div>
               );
             })
