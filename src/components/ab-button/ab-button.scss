@@ -1,12 +1,31 @@
 :host {
-  padding: 15px 20px;
   background: $secondary;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 6px $secondary-darken-20;
   color: $white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 25px 80px;
+  position: relative;
+  text-transform: uppercase;
   display: inline-block;
-  border: 1px solid $white;
-  border-radius: 40px;
+  font-weight: normal;
+  outline: none;
+  position: relative;
+  // -webkit-transition: all 0.3s;
+  // -moz-transition: all 0.3s;
+  // transition: all 0.3s;
 }
 
 :host(:hover) {
   cursor: pointer;
+  box-shadow: 0 4px $secondary-darken-20;
+  top: 2px;
+}
+
+:host(:active) {
+  cursor: pointer;
+  box-shadow: 0 0 #ab3c3c;
+  top: 6px;
 }

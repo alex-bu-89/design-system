@@ -24,8 +24,12 @@ $yellow:    #FFC357 !default;
 $pink:      #FE7F84 !default;
 $cyan:      #17a2b8 !default;
 
-$primary:     $navi !default;
+$primary:               $navi !default;
+$primary-darken-20:     darken($primary, 20%) !default;
+
 $secondary:   $blue !default;
+$secondary-darken-20:     darken($secondary, 20%) !default;
+
 $success:     $green !default;
 $info:        $cyan !default;
 $warning:     $yellow !default;
