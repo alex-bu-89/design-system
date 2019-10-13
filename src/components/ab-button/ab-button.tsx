@@ -3,7 +3,7 @@ import { Component, Host, Element, State, Prop, h } from '@stencil/core';
 @Component({
   tag: 'ab-button',
   styleUrl: 'ab-button.scss',
-  shadow: true
+  shadow: false
 })
 export class Rating {
   @Prop() type: string;

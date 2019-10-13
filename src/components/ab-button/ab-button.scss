@@ -1,4 +1,4 @@
-:host {
+ab-button {
   background: $secondary;
   border: none;
   border-radius: 7px;
@@ -13,19 +13,75 @@
   font-weight: normal;
   outline: none;
   position: relative;
+  overflow: hidden;
   // -webkit-transition: all 0.3s;
   // -moz-transition: all 0.3s;
   // transition: all 0.3s;
+
+  // &::after {
+  //   display: none;
+  //   content: "";
+  //   position: absolute;
+  //   border-radius: 50%;
+  //   background-color: rgba(0, 0, 0, 0.3);
+
+  //   width: 100px;
+  //   height: 100px;
+  //   margin-top: -50px;
+  //   margin-left: -50px;
+
+  //   /* Center the ripple */
+  //   top: 50%;
+  //   left: 50%;
+
+  //   animation: ripple 1s;
+  //   opacity: 0;
+  // }
 }
 
-:host(:hover) {
-  cursor: pointer;
-  box-shadow: 0 4px $secondary-darken-20;
-  top: 2px;
+ab-button::after {
+  display: none;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+
+  /* Center the ripple */
+  top: 50%;
+  left: 50%;
+
+  animation: ripple 1s;
+  opacity: 0;
 }
 
-:host(:active) {
-  cursor: pointer;
-  box-shadow: 0 0 #ab3c3c;
-  top: 6px;
+ab-button:focus:not(:active)::after {
+  display: block;
+}
+
+// ab-button:hover {
+//   cursor: pointer;
+//   box-shadow: 0 4px $secondary-darken-20;
+//   top: 2px;
+// }
+
+// ab-button:active {
+//   cursor: pointer;
+//   box-shadow: 0 0 #ab3c3c;
+//   top: 6px;
+// }
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
 }
