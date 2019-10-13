@@ -9,7 +9,9 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface AbButton {}
+  interface AbButton {
+    'type': string;
+  }
   interface AbColors {}
   interface AbLayoutSection {
     'header': string;
@@ -86,7 +88,9 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface AbButton extends JSXBase.HTMLAttributes<HTMLAbButtonElement> {}
+  interface AbButton extends JSXBase.HTMLAttributes<HTMLAbButtonElement> {
+    'type'?: string;
+  }
   interface AbColors extends JSXBase.HTMLAttributes<HTMLAbColorsElement> {}
   interface AbLayoutSection extends JSXBase.HTMLAttributes<HTMLAbLayoutSectionElement> {
     'header'?: string;
