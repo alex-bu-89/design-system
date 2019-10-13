@@ -1,0 +1,12 @@
+:host {
+  padding: 15px 20px;
+  background: $secondary;
+  color: $white;
+  display: inline-block;
+  border: 1px solid $white;
+  border-radius: 40px;
+}
+
+:host(:hover) {
+  cursor: pointer;
+}
