@@ -1,3 +1,5 @@
+// https://github.com/Kvaibhav01/Ripple-without-JS/blob/master/style.css
+
 import { Component, Host, Element, State, Prop, h } from '@stencil/core';
 
 @Component({
