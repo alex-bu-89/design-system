@@ -7,12 +7,11 @@ import { Component, Host, Element, State, Prop, h } from '@stencil/core';
   styleUrl: 'ab-button.scss',
   shadow: false
 })
-export class Rating {
+export class ABButton {
   @Prop() type: string;
 
   @State() attribute = {
     class: 'ab-button',
-    type: this.type || 'type="button"',
     onClick: this.btnClick.bind(this),
  };
 
@@ -25,7 +24,7 @@ export class Rating {
 
   render() {
     return  (
-      <Host>
+      <Host class={this.attribute.class}>
         <slot />
       </Host>
     );
