@@ -24,7 +24,7 @@ export class ABButton {
 
   render() {
     return  (
-      <Host class={this.attribute.class}>
+      <Host class={`ripple ${this.attribute.class}`}>
         <slot />
       </Host>
     );
