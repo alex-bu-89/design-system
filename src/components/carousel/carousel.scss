@@ -12,6 +12,7 @@ ab-carousel {
     flex-shrink: 0;
     max-height: 100vh;
     height: 100%;
+    overflow: visible;
 
     &.animate {
       transition: transform 400ms ease-out;
@@ -27,7 +28,7 @@ ab-carousel {
 
     img.ab-carousel-slide,
     .ab-carousel-slide img {
-      object-fit: none;
+      width: 100%;
     }
   }
 
