@@ -13,6 +13,10 @@ export namespace Components {
   interface AbButton {
     'type': string;
   }
+  interface AbCarousel {
+    'childsClassName': string;
+    'fluidImg': string;
+  }
   interface AbColors {}
   interface AbLayoutSection {
     'header': string;
@@ -47,6 +51,12 @@ declare global {
   var HTMLAbButtonElement: {
     prototype: HTMLAbButtonElement;
     new (): HTMLAbButtonElement;
+  };
+
+  interface HTMLAbCarouselElement extends Components.AbCarousel, HTMLStencilElement {}
+  var HTMLAbCarouselElement: {
+    prototype: HTMLAbCarouselElement;
+    new (): HTMLAbCarouselElement;
   };
 
   interface HTMLAbColorsElement extends Components.AbColors, HTMLStencilElement {}
@@ -92,6 +102,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'ab-button': HTMLAbButtonElement;
+    'ab-carousel': HTMLAbCarouselElement;
     'ab-colors': HTMLAbColorsElement;
     'ab-layout-section': HTMLAbLayoutSectionElement;
     'ab-native-slider': HTMLAbNativeSliderElement;
@@ -105,6 +116,10 @@ declare global {
 declare namespace LocalJSX {
   interface AbButton {
     'type'?: string;
+  }
+  interface AbCarousel {
+    'childsClassName'?: string;
+    'fluidImg'?: string;
   }
   interface AbColors {}
   interface AbLayoutSection {
@@ -134,6 +149,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'ab-button': AbButton;
+    'ab-carousel': AbCarousel;
     'ab-colors': AbColors;
     'ab-layout-section': AbLayoutSection;
     'ab-native-slider': AbNativeSlider;
@@ -151,6 +167,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'ab-button': LocalJSX.AbButton & JSXBase.HTMLAttributes<HTMLAbButtonElement>;
+      'ab-carousel': LocalJSX.AbCarousel & JSXBase.HTMLAttributes<HTMLAbCarouselElement>;
       'ab-colors': LocalJSX.AbColors & JSXBase.HTMLAttributes<HTMLAbColorsElement>;
       'ab-layout-section': LocalJSX.AbLayoutSection & JSXBase.HTMLAttributes<HTMLAbLayoutSectionElement>;
       'ab-native-slider': LocalJSX.AbNativeSlider & JSXBase.HTMLAttributes<HTMLAbNativeSliderElement>;
