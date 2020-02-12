@@ -7,9 +7,9 @@ import { Component, State, Prop, h, Element, Listen, Host } from '@stencil/core'
 })
 export class Carousel {
   // PRIVATE
-  activeClassName: string = 'carousel-active';
-  wrapperClassName: string = 'carousel-wrapper';
-  childsClassName: string = 'carousel-slide';
+  activeClassName: string = 'ab-carousel--active';
+  wrapperClassName: string = 'ab-carousel__wrapper';
+  childsClassName: string = 'ab-carousel__slide';
   carouselWrapper: HTMLElement;
   slides: HTMLElement[];
   slideCount: number = 0;
@@ -290,7 +290,7 @@ export class Carousel {
    */
   render() {
     return (
-      <Host>
+      <Host class="ab-carousel">
         <section class={this.wrapperClassName}>
           <slot />
         </section>
