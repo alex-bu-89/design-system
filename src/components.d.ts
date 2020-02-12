@@ -14,8 +14,9 @@ export namespace Components {
     'type': string;
   }
   interface AbCarousel {
-    'childsClassName': string;
-    'fluidImg': string;
+    'controls': boolean;
+    'indicators': boolean;
+    'lazyloading': boolean;
   }
   interface AbColors {}
   interface AbLayoutSection {
@@ -31,13 +32,6 @@ export namespace Components {
   }
   interface AbRating {
     'maxValue': number;
-    'value': number;
-  }
-  interface AbSlider {
-    'max': number;
-    'min': number;
-    'name': string;
-    'step': number;
     'value': number;
   }
   interface AbToogleButton {}
@@ -83,12 +77,6 @@ declare global {
     new (): HTMLAbRatingElement;
   };
 
-  interface HTMLAbSliderElement extends Components.AbSlider, HTMLStencilElement {}
-  var HTMLAbSliderElement: {
-    prototype: HTMLAbSliderElement;
-    new (): HTMLAbSliderElement;
-  };
-
   interface HTMLAbToogleButtonElement extends Components.AbToogleButton, HTMLStencilElement {}
   var HTMLAbToogleButtonElement: {
     prototype: HTMLAbToogleButtonElement;
@@ -107,7 +95,6 @@ declare global {
     'ab-layout-section': HTMLAbLayoutSectionElement;
     'ab-native-slider': HTMLAbNativeSliderElement;
     'ab-rating': HTMLAbRatingElement;
-    'ab-slider': HTMLAbSliderElement;
     'ab-toogle-button': HTMLAbToogleButtonElement;
     'ab-toogle-group': HTMLAbToogleGroupElement;
   }
@@ -118,8 +105,9 @@ declare namespace LocalJSX {
     'type'?: string;
   }
   interface AbCarousel {
-    'childsClassName'?: string;
-    'fluidImg'?: string;
+    'controls'?: boolean;
+    'indicators'?: boolean;
+    'lazyloading'?: boolean;
   }
   interface AbColors {}
   interface AbLayoutSection {
@@ -137,13 +125,6 @@ declare namespace LocalJSX {
     'maxValue'?: number;
     'value'?: number;
   }
-  interface AbSlider {
-    'max'?: number;
-    'min'?: number;
-    'name'?: string;
-    'step'?: number;
-    'value'?: number;
-  }
   interface AbToogleButton {}
   interface AbToogleGroup {}
 
@@ -154,7 +135,6 @@ declare namespace LocalJSX {
     'ab-layout-section': AbLayoutSection;
     'ab-native-slider': AbNativeSlider;
     'ab-rating': AbRating;
-    'ab-slider': AbSlider;
     'ab-toogle-button': AbToogleButton;
     'ab-toogle-group': AbToogleGroup;
   }
@@ -172,7 +152,6 @@ declare module "@stencil/core" {
       'ab-layout-section': LocalJSX.AbLayoutSection & JSXBase.HTMLAttributes<HTMLAbLayoutSectionElement>;
       'ab-native-slider': LocalJSX.AbNativeSlider & JSXBase.HTMLAttributes<HTMLAbNativeSliderElement>;
       'ab-rating': LocalJSX.AbRating & JSXBase.HTMLAttributes<HTMLAbRatingElement>;
-      'ab-slider': LocalJSX.AbSlider & JSXBase.HTMLAttributes<HTMLAbSliderElement>;
       'ab-toogle-button': LocalJSX.AbToogleButton & JSXBase.HTMLAttributes<HTMLAbToogleButtonElement>;
       'ab-toogle-group': LocalJSX.AbToogleGroup & JSXBase.HTMLAttributes<HTMLAbToogleGroupElement>;
     }
